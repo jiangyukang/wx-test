@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <button bindtap="bean_json" class="btn">bean_json</button>
+  <button bindtap="listbean_json" class="btn">listbean_json</button>
+  <button bindtap="mapbean_json" class="btn">mapbean_json</button>
+  <button bindtap="json_json" class="btn">json_json</button>
+  <view class="line"></view>
+  <!-- <form bindsubmit="json_json">
+    <view>
+      <view >姓名</view>
+      <input name="username" type="text" class="input_bg"/>
+    </view>
+    <view>
+        <view >学号</view>
+        <input name="studentno" type="text" class="input_bg"/>
+    </view>
+    <view>
+        <view >性别</view>
+        <input name="gender" type="text" class="input_bg"/>
+    </view>
+    <view>
+        <view >校区</view>
+        <input name="campus" type="text" class="input_bg"/>
+    </view>
+    <view>
+        <view >学院</view>
+        <input name="college" type="text" class="input_bg"/>
+    </view>
+    <view>
+        <view >手机号</view>
+        <input name="phone" type="text" class="input_bg"/>
+    </view>
+    <button formType="submit" class="btn">json_json</button>
+  </form>
+  <text>{{show}}</text> -->
+</view>
