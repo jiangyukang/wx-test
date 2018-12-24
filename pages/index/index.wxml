@@ -3,7 +3,8 @@
   <button bindtap="bean_json" class="btn">bean_json</button>
   <button bindtap="listbean_json" class="btn">listbean_json</button>
   <button bindtap="mapbean_json" class="btn">mapbean_json</button>
-  <button bindtap="json_json" class="btn">json_json</button>
+  <button bindtap="user_register" class="btn">用户注册</button>
+  <button bindtap="item_add" class="btn">增加比赛项目</button>
   <view class="line"></view>
   <!-- <form bindsubmit="json_json">
     <view>

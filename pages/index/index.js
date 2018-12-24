@@ -27,7 +27,7 @@ Page({
   listbean_json: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/wx-test/user/listbean2json.mn',
+      url: 'http://localhost:8080/user/listbean2json.action',
       data: {
         'listuser[0].username': "Hello",
         'listuser[0].age': 18,
@@ -74,32 +74,71 @@ Page({
       }
     })
   },
-  json_json: function (res) {
+
+  //看这个方法即可
+  user_register: function (res) {
     var that = this;
     console.log(res.detail.value)
     wx.request({
       url: 'http://localhost:8080/user/register.action',
       // data: res.detail.value,
       data: {
-        username: "123",
+        username: "12345",
         studentno: "123",
+        wxid: "jiangyukang",
         gender: 1,
         campus: 1,
         college: 1,
-        phone: "123456"
+        phone: "123"
       },
       method: 'POST',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
-        var show = "表单提交返回jsonusername: "+res.data.username+"age: "+res.data.age;
-        that.setData({
-          show: show
-        })
+        console.log(res);
+        // var show = "表单提交返回状态码: "+res.data.status;
+        // that.setData({
+        //   show: show
+        // })
       }
     })
   },
+
+  //增加项目
+  item_add: function (res) {
+    var that = this;
+    console.log(res.detail.value)
+    wx.request({
+      url: 'http://localhost:8080/item/add.action',
+      data: {
+        game: "校运会",
+        category: "游泳",
+        item: "50米自由泳",
+        gender: 0,
+        description: "比赛项目12.24在嘉定校区游泳馆举办"
+      },
+      method: 'POST',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    })
+  },
+
+
+
+
+
+
+
+
+
+
+
+
   onLoad: function () {
   }
 })
